@@ -1,0 +1,56 @@
+@import 'global.scss';
+
+.active {
+    @extend .bg-dark, .text-dark;
+}
+
+.app-sidebar {
+    @extend .d-flex, .flex-column, .flex-shrink-0, .text-dark, .bg-medium, .text-dark;
+    height: 100vh;
+    width: 220px;
+}
+
+.file-select-group {
+    margin-top: -9px;
+    @extend .nav, .nav-pills, .p-3, .flex-column, .mb-auto;
+    .nav-link {
+        height: 37px;
+        overflow-x: hidden;
+        transition: 0.4s;
+        overflow-y: hidden;
+        &:hover {
+            @extend .bg-dark;
+            .trash {
+                opacity: 1;
+            }
+        }
+        .trash {
+            transition: 0.4s;
+            opacity: 0;
+            float: right;
+            @extend .text-medium;
+        }
+        .trash:hover {
+            @extend .text-dark;
+        }
+        .icon {
+            margin-right: 7px;
+            margin-bottom: 3px;
+        }
+    }
+}
+
+.workspace-select-group {
+    display: flex;
+    align-items: center;
+    transition: 0.4s;
+    margin: none;
+    padding: 14px 6px;
+    &:hover {
+        @extend .bg-dark;
+    }
+    .title {
+        font-size: 17px;
+        margin-left: 19px;
+    }
+}

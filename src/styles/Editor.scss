@@ -1,0 +1,119 @@
+@import 'global.scss';
+
+.rtinput-group {
+    display: flex;
+    align-items: flex-start;
+}
+
+.rtinput-group:hover {
+    .btn-hidden {
+        opacity: 1;
+    }
+
+    .rtinput-editable {
+        @extend .bg-medium;
+    }
+}
+
+.btn-hidden-focused {
+    opacity: 1 !important;
+}
+
+.btn-hidden {
+    opacity: 0;
+    @extend .bg-light;
+    @extend .text-medium;
+    padding: 9 7px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition-duration: 0.4s;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.btn-hidden:hover {
+    @extend .bg-medium;
+}
+
+.rtinput-editable {
+    @extend .text-dark;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+    outline: none;
+    transition-duration: 0.4s;
+    margin-bottom: 5px;
+    resize: none;
+}
+
+.rtinput-editable:focus {
+    @extend .bg-medium;
+}
+
+.editor-window-group {
+    overflow-y: scroll;
+    width: calc(100vw - 190px);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    @extend .bg-light;
+}
+
+.editor-wrapper {
+    width: 100%;
+}
+
+.editor {
+    height: calc(100% - 10px);
+    margin: 0 auto;
+    width: 60%;
+}
+
+.editor-top-bar {
+    display: inline-flex;
+    margin-top: 2em;
+    button {
+        @extend .btn-hidden;
+    }
+}
+
+.editor-top-group {
+    &:hover {
+        .editor-top-bar button {
+            opacity: 1;
+        }
+    }
+}
+.editor-input-title {
+    border: none;
+    width: 100%;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.4s;
+    @extend .h1, .bg-light;
+    &:hover {
+        @extend .bg-medium;
+    }
+}
+
+.editor-empty {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    .content {
+        text-align: center;
+    }
+    .logo {
+        margin-top: -10px;
+        font-size: 18px;
+        padding: 10px;
+    }
+}
+
+.icon {
+    margin-bottom: 3px;
+}

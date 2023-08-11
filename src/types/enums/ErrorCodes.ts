@@ -1,0 +1,6 @@
+export enum ErrorCodes {
+    UNKNOWN_ERROR = 1,
+    LOAD_FILE_ERROR = 1000,
+    SAVE_FILE_ERROR = 1001,
+    ITEM_NOT_FOUND_ERROR = 1002,
+}
